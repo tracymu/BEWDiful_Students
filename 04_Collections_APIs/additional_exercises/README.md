@@ -1,6 +1,6 @@
 ![GeneralAssemb.ly](http://studio.generalassemb.ly/GA_Slide_Assets/Exercise_icon_md.png)
 
-## Extra Practice!
+## Practice Makes Perfect!
 
 
 | | |
