@@ -25,7 +25,7 @@ To pass projects must include:
 
 
 ##MILESTONES
-Week 3 - Project Proposal Due
+Week 4 - Project Proposal Due
 
 Week 6 - Version 1
 
