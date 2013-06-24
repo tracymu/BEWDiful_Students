@@ -73,9 +73,9 @@ During this class we will learn how to use the command line, Git, Ruby and Rails
 
 
 ##Web Development
-###How does the web work?
-###What is front-end web development?
-###What is back-end web development?
+How does the web work?
+What is front-end web development?
+What is back-end web development?
 
 
 ---
