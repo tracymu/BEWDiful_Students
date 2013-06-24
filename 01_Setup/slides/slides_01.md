@@ -2,20 +2,20 @@
 
 #BEWD - Working Like A Developer 
 
-###Instructor Name
+###Ben Askins
 
-Instructors current role.
+Head Geek, Insvrance
 
 ---
 
 
 ##Agenda
 
-*	Install
-*	Intros
-*	What is Web Development
-*	Bash Commands
-*	Using GitHub
+* Install
+* Intros
+* What is Web Development
+* Bash Commands
+* Using GitHub
 
 ---
 
@@ -23,12 +23,6 @@ Instructors current role.
 ##Installation
 ###Terminal
 
-
-This class is using Ruby 2.0 and Rails 4.0. 
-
-We are still putting together instructions for both PCs and MACs. 
-
-For now please have students install using your preferred method.
 
 ####Installing on OS X
 
@@ -46,34 +40,43 @@ For now please have students install using your preferred method.
 
 
 ##Introductions
-Instructors choose your ice breaker
+
+Lets get to know one another!
+
+* who are you?
+* what is your development background?
+* what are you hoping to get out of this course?
+
 
 ---
 
 ##Course Administration
 ###Lets Get This Out Of The Way
 
-During this class we will learn command line, Git, Ruby and Rails, in that order.
+During this class we will learn how to use the command line, Git, Ruby and Rails, in that order.
 
-*	To pass the course: 
-	*	Complete 80% of all assigned homework
-	*	Complete final project
+* To pass the course:
+ * Complete 80% of all assigned homework
+ * Complete final project
 
 ---
 
 ##Course Administration
 
-*	What you will get from us
-	* 	In class labs
-	* 	Homework
-	* 	Slides / student handout to be viewed in GitHub
-	* 	Awesome instructor
+* What you will get from us
+ *  In class labs
+ *  Homework
+ *  Slides / student handout to be viewed in GitHub
+ *  Instructor with industry experience
 
 ---
 
 
 ##Web Development
-###What is Back-End Web Development?
+###How does the web work?
+###What is front-end web development?
+###What is back-end web development?
+
 
 ---
 
@@ -89,11 +92,11 @@ During this class we will learn command line, Git, Ruby and Rails, in that order
 ##Command Line
 ###Why Work Like A Developer?
 
-*	Its faster
-	*	Working with the keyboard increases your speed. The mouse slows you down.
+* Its faster
+ * Working with the keyboard increases your speed. The mouse slows you down.
 
 * Its Cool!
-	*	Impress your friends as you navigate the computer using your keyboard.
+ * Impress your friends as you navigate the computer using your keyboard.
 ---
 
 
@@ -126,11 +129,10 @@ During this class we will learn command line, Git, Ruby and Rails, in that order
 ---
 
 
-##Terminal
+##Command Line
 ###Join The Developer Club
 
-*	You are now one of the cool kids. 
-	*	Keep practicing and see the cheat sheet in the handout for a list of common commands.
+* You are now one of the cool kids. 
 
 ---
 
@@ -153,9 +155,9 @@ During this class we will learn command line, Git, Ruby and Rails, in that order
 ##Git
 ###Why Use GIT?
 
-*	Confident Changes
-*	Checkpoints
-*	File recovery 
+* Confident Changes
+* Checkpoints
+* File recovery 
 
 ![Why Use GIT](../../assets/GitHub/why_use_git.png)
 
@@ -172,7 +174,7 @@ During this class we will learn command line, Git, Ruby and Rails, in that order
 ##GitHub
 ###What is GitHub?
 
-*	Is Git the same as GitHub?
+* Is Git the same as GitHub?
 
 ![Developer Humor](../../assets/GitHub/octocat.png)
 
@@ -201,8 +203,8 @@ During this class we will learn command line, Git, Ruby and Rails, in that order
 
 ## Homework
 
--	Create a blog to document your experience
--	Write about your first BEWD class in your blog
+- Create a blog to document your experience
+- Write about your first BEWD class in your blog
 
 ---
 
@@ -219,62 +221,62 @@ The terminal (command prompt on Windows) is the developer way of navigating your
 Here is a quick reference for some of the most common commands you will use in this class. 
 Remember when you see ```“$”``` or ```“C:\>”``` in these notes that is the prompt, don’t type it.
 
- 		$  MAC
-		C:\>  WINDOWS
+   $  MAC
+  C:\>  WINDOWS
 ####Navigation
 
 
 How do I get into a folder?
 
-  		$cd folder_name
-		C:\> cd folder_name
+    $cd folder_name
+  C:\> cd folder_name
 
 Use quotation marks if your folder name has spaces.
 
 How do I get to the parent folder?
 
-		$cd ..
-		C:\> cd ..
+  $cd ..
+  C:\> cd ..
 
 How do I see what is in the folder?
 
-		$ls
-		C:\> dir
+  $ls
+  C:\> dir
 
 
 How do I know what folder I am in?
 
-		$pwd
-		C:\> cd
+  $pwd
+  C:\> cd
 
 How do I create a new folder?
 
-		$mkdir folder_name
-		C:\> mkdir folder_name
+  $mkdir folder_name
+  C:\> mkdir folder_name
 
 
 ####Deleting - (Proceed With Caution)
 
 How do I delete a folder?
 
-		$rm -r folder_name
-		c:\> rmdir folder-name
+  $rm -r folder_name
+  c:\> rmdir folder-name
 
 How do I delete a file?
-		
-		$rm -f file_name
-		C:\> del file_name
+  
+  $rm -f file_name
+  C:\> del file_name
 
 How do I move a file?
 
-		$mv file_name folder_name
-		C:\> move file_name folder_name
+  $mv file_name folder_name
+  C:\> move file_name folder_name
 The file is removed from the old location and moved to the new one.
 
 You can rename a file the same way
 
-		$mv old_name new_name
-		C:\> move old_name new_names
+  $mv old_name new_name
+  C:\> move old_name new_names
 
 
 ##Tips, Tricks & Motivation
@@ -285,17 +287,17 @@ We hire wizards from Hogwarts to teach our courses. Just kidding they’re using
 
 Here are some to help you keep up:
 
-**Tab Completion**: Press Tab to complete folder and file names                                                       
+**Tab Completion**: Press Tab to complete folder and file names
 
-**Control + a**: Go to the beginning of the line                                                                      
+**Control + a**: Go to the beginning of the line
 
-**Control + e**: Go the the end of the line                                                                      
+**Control + e**: Go the the end of the line
 
 **Option + b**: Move back one word
 
 **Option + f**: Move forward one word
 
-**Up/Down Arrow Keys**: Repeats previous commands                                                               
+**Up/Down Arrow Keys**: Repeats previous commands
 
 **Control + w**: Delete last word typed
 
@@ -303,7 +305,7 @@ Here are some to help you keep up:
 
 **Control + y**: Paste last deleted item
 
-**Control + l**: Clear the screen        
+**Control + l**: Clear the screen
  
 
 
@@ -325,10 +327,10 @@ __Adding A Remote__
 ###Catch Up With These Resources
 
 
--	[Command Line Crash Course](http://cli.learncodethehardway.org/book/)
+- [Command Line Crash Course](http://cli.learncodethehardway.org/book/)
 
--	[GitHub Cheat Sheet](https://na1.salesforce.com/help/doc/en/salesforce_git_developer_cheatsheet.pdf)
+- [GitHub Cheat Sheet](https://na1.salesforce.com/help/doc/en/salesforce_git_developer_cheatsheet.pdf)
 
--	[Intro to Git Videos](http://git-scm.com/videos)
+- [Intro to Git Videos](http://git-scm.com/videos)
 
--	[Intro to Git Tutorial](http://www.codeschool.com/courses/try-git) from Code School.
+- [Intro to Git Tutorial](http://www.codeschool.com/courses/try-git) from Code School.
