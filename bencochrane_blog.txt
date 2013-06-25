@@ -1,0 +1,14 @@
+General Assembly Back End Web Dev Course Blog
+
+
+Blog for Session 1
+
+I am excited to learn how to create web apps by doing this course. The course has started well and the instructor is easy to understand and explains things well. 
+
+I have an idea for a web app that to help childcare workers create development portfolios for their students using software rather than physical scrap books. 
+
+First course was an intro into the Command Line and Git. This first session was a great session and I really enjoyed getting into the content - I am really looking forward to the next lesson. 
+
+I like that there is so much hands on work to do and basically no theory. I wish I had done this type of learning as well as this course 10 years ago. 
+
+Looking forward to the next class and to getting into some Ruby code as well as the Rails framework. 
