@@ -1,0 +1,90 @@
+Lynn Cook's Learning Blog
+for
+Back-End Web Development
+
+25 June 2013
+
+making and running a .sh script
+
+1. make a .sh file e.g. touch new.sh
+2. open the file and write the code
+e.g.
+mkdir -p new
+cd new
+touch $1
+echo $2 > $1
+cd ..
+more new/$1
+NB: $1 is the first variable (or argument?), $2 the second, … $n the nth
+
+3. to run a non-executable sh script use:
+	$ sh myscript
+4. to make a script executable
+	$ chmod u+x myscript
+5. to run an executable script
+	$ ./myscript
+	e.g.
+	$ ./new.sh content "There's stuff in here."
+
+Lesson 1
+24 June 2013
+
+homework
+
+- add a public key to github - done
+- revise slides - benaskins.github.io/BEWDiful_Students
+- in local folder create a file called Lynn_blog.txt and write about first GA class - commit and push to github and send Ben a pull request - done
+- find command line tools for SublimeText
+
+before each class
+
+in BEWDiful_Students directory
+1. git fetch teacher
+2. git merge teacher/master
+
+notes - git
+
+1. git init <- Once only per folder
+2. git add - adds files to staging area
+3. git commit - to add to repo
+4. git push - to send them to git hub
+
+git on home machine
+push to git hub for online storage
+
+5. git log - shows log of changes
+6. git status - shows where you're up to
+
+branch off to work separately and have two separate lot of commits, can merge back into master branch
+
+fork - can take a whole repository and work on it in your own repository, can be merged back into master via pull request - this is a GitHub thing
+
+
+notes - command line and setup
+
+pwd	present working directory - where I am right now
+mkdir	make directory
+cd	change directory
+ls	list directories and files in a particular directory
+ls -a	lists all directories and files in a directory
+ls -l	long list i.e. detailed list with read, write, execute details, size of files, date etc
+touch	add a new file
+open	open a file (Mac will find an appropriate app)
+open .	open the current directory in Finder
+more	shows contents of file
+echo	repeats whatever is after itself on Terminal screen as a string
+>	takes output from left and overwrites to file on right
+>>	takes output from left and appends to file on right
+cmd K	clears screen
+ctrl C	abort, stops process
+
+cmd space - spotlight - useful for finding files and applications quickly
+
+
+notes - Ruby on Rails
+
+37Signals building Basecamp, got David Heinemeier Hansson to build the web app bit, which he did using Ruby and developed Ruby on Rails as a web framework in the process. Interesting!
+
+
+
+
