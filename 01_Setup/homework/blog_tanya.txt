@@ -1,0 +1,5 @@
+June 24, 2013 - First backend web class was awesome, I think it was a great insight into the changing mindset most of us will be undergoing over the next 10 weeks. You will be pleased to note that I created this file via touch & open from cmd.
+
+Especially appreciated the visual intro to git, as although I have used git on and off over the past year, having it explained in that way was really helpful. Looking forward to the course and learning how to do things the right (geek) way :) 
+
+Tanya
