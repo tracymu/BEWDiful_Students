@@ -3,3 +3,4 @@
 #BEWD - Slide Index
 
 [Lesson 1](http://benaskins.github.io/BEWDiful_Students/01_Setup/slides/)
+[Lesson 2](http://benaskins.github.io/BEWDiful_Students/02_Variables_Conditionals/slides/)
