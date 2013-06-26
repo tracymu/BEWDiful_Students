@@ -28,9 +28,9 @@
 3.	How do I add files to git?
 4.	What is a GitHub Repository?
 5.  What is the correct way to push changes to your GitHub repo?
-	a. git pull origin master
-	b. git commit -m "push to GitHub"
-	c. git push origin master
+  * git pull origin master
+	* git commit -m "push to GitHub"
+	* git push origin master
 
 ---
 
