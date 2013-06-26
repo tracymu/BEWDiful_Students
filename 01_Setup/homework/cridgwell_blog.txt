@@ -1,0 +1,10 @@
+BEWD Blog
+Day one
+
+A quick glance around the room shows that i'm the only with a beard and wearing plaid. Does that give me some sort of geek advantage? Maybe. Or maybe i'm just another hipster urban lumberjack.
+
+Ruby and Rails installation woes aside, i'm feel ready to completely git my entire computer, and can't wait to git all the subdirectories within.
+
+Craig out.
+
+ps. I'm already sick of committing and forgetting to add the -m flag, and consequently having to remember how to save and get out of the edit message screen. One day i'll get it.
