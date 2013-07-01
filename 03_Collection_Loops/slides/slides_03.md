@@ -36,7 +36,7 @@ Head Geek, Insvrance Pty Ltd
 
 ```ruby
 3.times do
-  puts "going…"
+    puts "going…"
 end
 puts "gone""
 ```
