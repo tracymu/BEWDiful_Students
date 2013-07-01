@@ -34,28 +34,32 @@ Head Geek, Insvrance Pty Ltd
 ##Iteration (Ruby-esque Loops)
 ###Times Iterator
 
-    3.times do
-      puts "going…"
-    end
-    puts "gone""
-   
-    # going...
-    # going...
-    # going...
-    # gone
+```ruby
+3.times do
+  puts "going…"
+end
+puts "gone""
+
+# going...
+# going...
+# going...
+# gone
+```
 ---
 
 
 ##Iteration (Ruby-esque Loops)
 ###.upto
  
- 1.upto(3) do |num|
-  puts "#{num}.going"
- end
- 
- # 1. going
- # 2. going
- # 3. going
+```ruby
+1.upto(3) do |num|
+puts "#{num}.going"
+end
+
+# 1. going
+# 2. going
+# 3. going
+```
 
 ---
 
@@ -63,13 +67,15 @@ Head Geek, Insvrance Pty Ltd
 ##Iteration (Ruby-esque Loops)
 ###.downto
  
- 3.downto(1) do |guess|
-  puts "You have #{guess} guesses left"
- end
+```ruby
+3.downto(1) do |guess|
+puts "You have #{guess} guesses left"
+end
 
- # You have 3 guesses left
- # You have 2 guesses left
- # You have 1 guesses left
+# You have 3 guesses left
+# You have 2 guesses left
+# You have 1 guesses left
+```
 
 ---
 
