@@ -2,9 +2,9 @@
 
 #BEWD - Collections & Loops
 
-###Instructor Name
+###Ben Askins
 
-Instructors current role.
+Head Geek, Insvrance
 
 ---
 
