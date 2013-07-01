@@ -35,4 +35,43 @@
 # Remember to cast input from the Player into the appropriate data type.
 #
 ###############################################################################
+#Welcome player to game and get their name
+puts "Welcome to the Secret Number game, made by TracyMu. What is your name?"
+player_name=gets.chomp
+puts "Hi #{player_name}! To play this game, you need to guess a number between 1 and 10, you will have three tries"
+
+#assign secret number and number of guesses
+secret_number = 4
+guesses = 3
+
+# Put guess process in a function so can re-use.
+def have_a_guess
+  puts "Have a guess!"
+  guess = gets.chomp
+  guess = guess.to_i
+
+  if guess == secret_number
+    puts "Congratulations, that's it!"
+    guesses=0
+  elsif guess < secret_number
+    puts "Too high, guess again"
+    guesses = guesses - 1
+  elsif guess > secret_number
+    puts "Too low, guess again"
+    guesses = guesses - 1
+  end 
+end
+
+
+while guesses > 0
+  puts "You have #{guesses} guesses left"
+  have_a_guess
+end
+
+puts "Sorry, no more guesses allowed. The secret number was #{secret_number}."
+
+
+
+
+
 

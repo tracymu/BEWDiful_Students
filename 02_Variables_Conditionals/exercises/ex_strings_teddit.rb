@@ -20,3 +20,14 @@
 # 	User enters: ecological
 # 	New story added! Bear feels remorse for stealing candy from baby, Category: Ecological, Current Upvotes: 1
 
+puts "Welcome"
+
+puts "Do you have a story title?"
+title = gets
+
+puts "What category would you put your story in?"
+category = gets
+
+puts "New story! Title is #{title}, Category: #{category}, Current UPvotes: 1"
+
+
