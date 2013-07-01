@@ -35,10 +35,10 @@ Head Geek, Insvrance Pty Ltd
 ###Times Iterator
 
 ```ruby
-3.times do
+  3.times do
     puts "going…"
-end
-puts "gone""
+  end
+  puts "gone""
 ```
 ---
 
