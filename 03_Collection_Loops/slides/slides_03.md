@@ -96,28 +96,30 @@ See syntax in the resources section.
 
 ##Iteration Loops
 
- 10.downto(1) do |count|
+```ruby
+10.downto(1) do |count|
   puts "Looping"
- end
- 
- count = 10
- while count > 0
+end
+
+count = 10
+while count > 0
   puts "Looping"
   count -=1
- end
+end
 
- count = 10 
- until count < 1
+count = 10 
+until count < 1
   puts "Looping"
   count -= 1
- end
+end
 
- count = 10
- loop do
+count = 10
+loop do
   break if count < 1 
   puts "Looping"
   count -= 1
- end
+end
+```
  
 ---
 
@@ -169,10 +171,12 @@ ex_loop.rb
 ##Arrays
 ###Find by Index
 
+```ruby
  my_array = ["NYC", "LA", "SYD", "LDN"]
  my_array[0] #"NYC" 
  my_array[1] #"LA" 
  my_array[-1] #"SYD"   
+```
 
 ---
 
@@ -188,19 +192,21 @@ ex_loop.rb
 ##Arrays
 ###Find by Position
 
- my_array = ["NYC", "LA", "SYD", "LDN"]
- my_array.first #"NYC"
- my_array.last #"LDN"
+```ruby
+my_array = ["NYC", "LA", "SYD", "LDN"]
+my_array.first #"NYC"
+my_array.last #"LDN"
 
 
- # In rails...
- # Will not work in IRB
- my_array = ["NYC", "LA", "SYD", "LDN"]
- my_array.second
- my_array.third
- my_array.forth
- my_array.fifth
- my_array.forty_two # known as the reddit
+# In rails...
+# Will not work in IRB
+my_array = ["NYC", "LA", "SYD", "LDN"]
+my_array.second
+my_array.third
+my_array.forth
+my_array.fifth
+my_array.forty_two # known as the reddit
+```
 
 ---
 
@@ -208,11 +214,13 @@ ex_loop.rb
 ##Arrays
 ###Array Methods
 
- name = "Steven"
- name.upcase
+```ruby
+name = "Steven"
+name.upcase
 
- my_array = ["NYC", "LA", "SYD", "LDN"]
- my_array.reverse
+my_array = ["NYC", "LA", "SYD", "LDN"]
+my_array.reverse
+```
 
 ---
 
@@ -256,6 +264,7 @@ ex_arrays.rb
 ##Hases
 ###Find by key
 
+```ruby
  ga_markets = {"NYC" => "New York City", "LA" => "Los Angeles", "SYD" => "Sydney", "LDN" => "London"}
  
  ga_markets["NYC"] 
@@ -267,6 +276,7 @@ ex_arrays.rb
 "Los Angeles"
 
 "Sydney"
+```
 
 ---
 
@@ -274,12 +284,14 @@ ex_arrays.rb
 ##Hases
 ###Setting Values
 
+```ruby
  user_hash = {}
  user_hash["name"] = "Steven"
  user_hash["favorite_color"] = "Green"
 
 
 {"name"=>"Steven", "favorite_color"=>"Green"}
+```
 
 ---
 
@@ -289,7 +301,9 @@ ex_arrays.rb
 
 - Commonly used for hashes
  
+```ruby
   :i_am_a_symbol
+```
 
 ---
 
@@ -297,7 +311,9 @@ ex_arrays.rb
 ##Symbols
 ###Used as keys for hashes
 
+```ruby
  ga_markets = {:NYC => "New York City", :LA => "Los Angeles", :SYD => "Sydney", :LDN => "London"}
+```
 
 ---
 
@@ -306,6 +322,7 @@ ex_arrays.rb
 ##Hash
 ###Messages
 
+```ruby
  user = {user_name: "StevenNunez", email: "steven.nunez@gmail.com"}
  
  user.has_key? :email #true
@@ -313,6 +330,7 @@ ex_arrays.rb
  user.include? :email #true
  
  user.has_value? "StevenNunez" #true
+```
 
 ---
 
@@ -322,6 +340,7 @@ ex_arrays.rb
 ###Array of Hashes
 
 
+```ruby
   users = [
     {:user => "Steven Nunez", :role => "Instructor"},
     {:user => "Eddie Washington", :role=> "TA"}
@@ -335,6 +354,7 @@ ex_arrays.rb
    {user: "Eddie Washington", role: "TA"},
    {user: "Stephanie Morillo", role: "TA"}
   ]
+```
  
 ---
 
@@ -344,9 +364,11 @@ ex_arrays.rb
 ##Iterating Over Collections
 ###.each
 
+```ruby
  ga_markets = ["NYC", "LA", "SYD", "LDN"]
 
  ga_markets.each {|market| puts name}
+```
 
 
 ---
