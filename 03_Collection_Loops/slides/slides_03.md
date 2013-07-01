@@ -253,8 +253,8 @@ ex_arrays.rb
 	ga_markets = {"NYC" => "New York City", "LA" => "Los Angeles", "SYD" => "Sydney", "LDN" => "London"}
 	
 	ga_markets["NYC"]	
-	ga_markets[["LA"]
-	ga_markets[["SYD"]
+	ga_markets["LA"]
+	ga_markets["SYD"]
 	
 "New York City"	
 
