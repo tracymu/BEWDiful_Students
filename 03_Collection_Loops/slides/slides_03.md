@@ -34,15 +34,15 @@ Head Geek, Insvrance Pty Ltd
 ##Iteration (Ruby-esque Loops)
 ###Times Iterator
 
- 3.times do
-  puts "going…"
- end
- puts "gone""
- 
- # going...
- # going...
- # going...
- # gone
+    3.times do
+      puts "going…"
+    end
+    puts "gone""
+   
+    # going...
+    # going...
+    # going...
+    # gone
 ---
 
 
