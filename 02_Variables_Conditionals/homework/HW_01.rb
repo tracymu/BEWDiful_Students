@@ -38,37 +38,53 @@
 #Welcome player to game and get their name
 puts "Welcome to the Secret Number game, made by TracyMu. What is your name?"
 player_name=gets.chomp
-puts "Hi #{player_name}! To play this game, you need to guess a number between 1 and 10, you will have three tries"
+puts "Hi #{player_name}! To play this game, you need to guess a number between 1 and 10, you can have three tries"
 
-#assign secret number and number of guesses
-secret_number = 4
-guesses = 3
 
-# Put guess process in a function so can re-use.
-def have_a_guess
-  puts "Have a guess!"
-  guess = gets.chomp
-  guess = guess.to_i
+def play_game
+#Set secret number and number of guesses allowed
+  secret_number = 4
+  guesses = 3
 
-  if guess == secret_number
-    puts "Congratulations, that's it!"
-    guesses=0
-  elsif guess < secret_number
-    puts "Too high, guess again"
-    guesses = guesses - 1
-  elsif guess > secret_number
-    puts "Too low, guess again"
-    guesses = guesses - 1
-  end 
+# While loop so that only 3 guesses allowed
+  while guesses > 0 
+    puts "Have a guess!"
+    guess = gets.chomp
+    guess = guess.to_i
+# get the guess, remove spaces and turn into a number so you can compare
+    if guess == secret_number
+#If it matches secret number, winning message, and make no more guesses, game is over.      
+      puts "Congratulations, you win!"
+      guesses = 0
+    elsif guess < secret_number
+#IF guess too low, say it's too low, ask for another guess, then decrement guesses left   
+      puts "Sorry, too low"
+      guesses -= 1
+      if guesses == 0
+        puts "Oh no, you lose. The secret number was #{secret_number}"
+      end
+
+#If guess too high, say so, ask for another guess, then decrement guesses left.
+    elsif guess > secret_number
+      puts "Sorry, too high"
+      guesses -=1
+      if guesses == 0
+        puts "Oh no, you lose. The secret number was #{secret_number}"
+      end
+    end
+  end
+
+
 end
 
+play_game
 
-while guesses > 0
-  puts "You have #{guesses} guesses left"
-  have_a_guess
-end
 
-puts "Sorry, no more guesses allowed. The secret number was #{secret_number}."
+
+
+
+
+
 
 
 
