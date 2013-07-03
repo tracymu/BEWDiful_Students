@@ -29,7 +29,7 @@ category = gets.chomp
     votes = votes * 3
   end
 
-puts "New story! Title is #{title}, Category: #{category}, Current UPvotes: #{votes}"
+puts "New story! Title is #{title}, Category: #{category}, Current Upvotes: #{votes}"
 
 
 

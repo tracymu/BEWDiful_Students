@@ -20,7 +20,7 @@ stories = []
 
 #create function for each time you want a user to submit a story
 
-def gets_story() 
+def gets_story
   #create story hash
   story = {}
 
@@ -34,13 +34,13 @@ def gets_story()
   story[:category] = gets.chomp
 
   #depending on topic of story - multiply the number of votes
-    if story[:title].include? "cats"
-      story[:votes] *= 5
-    elsif story[:title].include? "bacon"
-      story[:votes] *= 8
-    elsif story[:title].include? "food"
-      story[:votes] *= 3
-    end
+  if story[:title].include? "cats"
+    story[:votes] *= 5
+  elsif story[:title].include? "bacon"
+    story[:votes] *= 8
+  elsif story[:title].include? "food"
+    story[:votes] *= 3
+  end
 
   puts "New story! Title is #{story[:title]}, Category: #{story[:category]}, Current Upvotes: #{story[:votes]}"
 
@@ -48,4 +48,11 @@ end
 
 stories << gets_story 
 stories << gets_story
+
+stories.each {|x| puts x }
+
+
+
+
+
 
