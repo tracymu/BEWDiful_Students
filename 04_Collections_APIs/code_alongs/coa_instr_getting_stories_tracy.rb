@@ -42,7 +42,7 @@ end
 
 raw_response = get_reddit_feed
 response = parse_reddit_feed(raw_response)
-#print_reddit_stories(response["data"]["children"])
+print_reddit_stories(response["data"]["children"])
 
 
 ###############################################################################
@@ -93,7 +93,7 @@ def print_mashable_story(story)
   puts
 end
 
-#print_mashable_stories(stories)
+print_mashable_stories(stories)
 
 ########################################################################
 ##DIGG API
@@ -134,8 +134,6 @@ end
 
 
 
-#print_digg_stories(stories)
+print_digg_stories(stories)
 
-
-puts response["data"]["feed"][0]["content"]["tags"][0].first
 
