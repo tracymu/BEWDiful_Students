@@ -1,15 +1,15 @@
 #Explaining: Variable Scope. 
-# methods create scope
+# # methods create scope
 
-chant = "Go Yankees!"
+# chant = "Go Yankees!"
 
-def shout
-  puts "About to shout"
-  puts chant.upcase
-  puts "My throat hurts"
-end
+# def shout
+#   puts "About to shout"
+#   puts chant.upcase
+#   puts "My throat hurts"
+# end
 
-shout
+# shout
 
 #Anything you want to use has to be passed inject
 #####################################################################################################
@@ -112,7 +112,7 @@ shout
 
 # puts "Cars have #{Car.WHEELS} wheels"
 
-# Needs the scope resolution operator. This just means "Go into this class and grab this constant". Only works with constants
+# # Needs the scope resolution operator. This just means "Go into this class and grab this constant". Only works with constants
 # class Car
 #   WHEELS = 4
 # end
@@ -122,31 +122,31 @@ shout
 # THERE IS RARELY A REASON TO USE THIS TYPE OF VARIABLE!
 #####################################################################################################
 #####################################################################################################
-#####################################################################################################
+####################################################################################################
 
-# $sharing_too_much = "We're all friends here"
-# class Nosy
-#   def look_around
-#     puts $sharing_too_much
-#   end
-# end
+$sharing_too_much = "We're all friends here"
+class Nosy
+  def look_around
+    puts $sharing_too_much
+  end
+end
 
-# class BadBoy
-#   def tamper
-#     $sharing_too_much = "You look fat in those jeans"
-#   end
-# end
+class BadBoy
+  def tamper
+    $sharing_too_much = "You look fat in those jeans"
+  end
+end
 
-# class Busybody
-#   def look_around
-#     puts $sharing_too_much
-#   end
-# end
+class Busybody
+  def look_around
+    puts $sharing_too_much
+  end
+end
 
-# nosy = Nosy.new
-# bad_boy = BadBoy.new
-# busy_body = Busybody.new
+nosy = Nosy.new
+bad_boy = BadBoy.new
+busy_body = Busybody.new
 
-# nosy.look_around
-# bad_boy.tamper
-# busy_body.look_around
+nosy.look_around
+bad_boy.tamper
+busy_body.look_around

@@ -1,3 +1,23 @@
+At the beginning of each lesson
+
+1. Check Git Status, and make sure everything is cleared up and tidy
+2. $ git fetch teacher
+3. $ git merge teacher/master (this will open up a sublime text for the message, so save that and close)
+(Also, note that merge and fetch together is the same as a pull)
+
+If you ever get stuck in Vim, you can type in this :wq!
+
+
+Then to submit homework:
+git add
+git commit
+git push origin master (origin master optional)
+in Git go to Bewdiful students in MY repository
+see the latest commit I did
+Then pull request
+
+
+
 BEWD Week 1
 30 June 2013
 
@@ -7,12 +27,175 @@ I have undertaken all the tutorials and readings that our tutor Ben has recommen
 
 BEWD Week 2 
 1 July
+Lesson 3
 
 This class we covered collections (arrays and hashes) and loops.
 
 
+puts always returns nil - e..g. if i\ the last thing in a method was a puts, then the method would return nil. 
+
+
+
+  
+
+Lesson 4
+
+APIs from Digg, Reddit and Hash.
+
+JSON - extracting from those APIs and
+
+Symbol - there can only be one of each e.g. :ben and :ben are the same
+they are immutable strings.
+whenever you repeat it is the same object in memory
 
 
 
 
+x | | = "a"
+
+This sets x to a, only if it is nil or false. 
+
+
+
+
+Passing hashes to methods
+
+def greet(name, options={})
+  options[:greeting] | | = "Hi"
+  puts "#{options[:greeting]} #{name}!!!"
+end
+
+
+
+JSON
+Javascript object notation
+
+
+
+Ruby Gems
+distributable ruby programs
+
+a gem is a ruby package
+
+write this in your file
+
+"source "https://rubygems.org"
+
+gem "httpi""
+
+then bundle install
+
+and it means you can have that httpi gem.
+
+
+
+gemfile.lock will be installed, and it means that later when you deploy it, it knows not to use any newer versions of those gems you installed, because you don't know if it works with those newer version gems
+
+
+
+
+$ bundle exec ruby filename.rb
+
+this command says run ruby and loads the right version of the required gems into your ruby path.
+
+and then whenever you want to run that file, instead of doing $ruby filename, you do $bundle exec ruby filename, to make sure you have the right versions of those gems 
+
+
+http://www.reddit.com/.json
+http://mashable.com/stories.json
+http://digg.com/api/news/popular.json
+http://jsonviewer.stack.hu
+
+
+
+ BEWD WEek 3
+ Lesson 5
+
+
+
+attr_accessor :name 
+sets up getting and setting methods
+def name= (val)
+  @name = val
+end
+
+def name
+  @name
+end
+
+
+To add the current folder to the load path
+In IRB write
+$LOAD_PATH.unshift(File.dirname(__FILE__))
+
+so that in IRB you can require any files that are in your current folder.
+We learnt that Load_PATH thing because it is recommended not to save too many classes in one file. I.e. so, if you have a class called car, then you would expect that to be in a file called car.rb  Not as part of a big huge file of millions or cars.
+
+
+
+
+
+
+VARIABLES AND THINGS
+
+Constants - written all CAPS - can't do Car.WHEELS, you need to do Car::WHEELS
+Local variable  - name - can only be used inside their methods
+Instance variable -  @name  - can be used in any instance method in that class
+Class variable - @@name  - something, that if you change it, it will be changed for every instance of that class. So, if you wanted to increment something each time an instance of that class was made, an instance variable wouldn't work, because it would increment once for each one, but that's it. Whereas a class variable would be able to increment for every time.
+
+See the example on lines 85 of coa_instr_scope.
+Global $name - available everywhere. Bad for security. 
+
+
+
+
+Class methods and Instance methods 
+Instance method can't be called on a class, and Class methods can't be called on an instance.
+
+class Class_name
+  def Class_name.method_name
+  this is a Class method
+end
+
+def method_name
+  this is an instance method
+end
+
+
+end
+
+MIDTERM
+
+what is omdapi.com
+
+how can we modify the teddit thing to 
+a) take user input
+b) be object oriented
+
+needs to be able to run ruby midterm.rb
+but it should include requires from other files
+e.g. require 'get_input' 
+require 'reddit-api'
+
+Classes with single-responsibilities of things they are taking care of. 
+e.g. class that prompts the user
+class that deals with the API
+class that deals with displaying the answer.
+
+Midterm requirements
+takes user input and handles bad input. e.g. you expect numbers, it gives you letters
+ connects to api, and call varies based on user iput
+must be object oriented
  
+The first line in ruby midterm.rb
+should be $LOAD.PATH.unshift)File.dirname(__FILE__))
+
+Homework: 05 - exerciese - secret_number.rb
+
+So - first thing of the nouns that are involved (These are the classes)
+Then think of the things they need to be able to do (these will be the methods)
+Break all these behaviours up really small.
+Make sure you break up the activities to the appropriate Class
+Note that no code should be in the class at all, they need to be in the methods
+when they interact with each other  - 
+see he has started
