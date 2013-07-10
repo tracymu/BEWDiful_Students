@@ -199,3 +199,9 @@ Make sure you break up the activities to the appropriate Class
 Note that no code should be in the class at all, they need to be in the methods
 when they interact with each other  - 
 see he has started
+
+
+Lesson 6 - Sharing Behaviour
+A class is a blueprint for an object
+
+
