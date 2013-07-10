@@ -45,73 +45,81 @@ class Main
     puts "This game was made by TracyMu."
     player = Player.new
     player.ask_name
-    puts "Hi #{@player_name}! "
+    puts "Hi #{player.player_name}! "
     game = Game.new
-
+    game.introduce_the_game
+    game.guessing
   end
 end
 
-class Secret_Number
+class SecretNumber
+  attr_accessor :random_number
+
   def select_random_number
     numbers = *(1..10)
-    secret_number = numbers.sample
+    @random_number = numbers.sample
   end
+
 end
 
 
 class Player
-  
-  
+  attr_accessor :player_name
+
   def ask_name
     puts "What's your name?"
-    @player_name=player_name
-    player_name = gets.chomp
+    @player_name = gets.chomp
   end
 end
 
 class Game
-  
-  @guesses = 3
-  Secret_Number.new
+  attr_accessor :guesses, :player_guess
 
   def introduce_the_game
     puts "Welcome to the secret number game. "
     puts "To play this game, you need to guess a number between 1 and 10, you can have three tries"
-    puts "Have a guess!"
-  # While loop so that only 3 guesses allowed
+    
   end
 
 
   def guessing
+    @secret_number = SecretNumber.new
+    @random_number = @secret_number.select_random_number
+
+    @guesses = 3
     while guesses > 0 
       puts "Have a guess!"
-      guess = gets.chomp.to_i
-      Game.guess    
+      @player_guess = gets.chomp.to_i
+      guess  
     end
   end
 
-  def guess(secret_number)
-    if guess == secret_number
-      puts "Congratulations, you win!"
-      guesses = 0
-    elsif guess < secret_number
+  def guess
+    if @player_guess == @random_number
+      puts "Congratulations, you win! The secret number was #{@random_number}"
+      @guesses = 0
+      puts "Secret number is #{@random_number}"
+    elsif @player_guess < @random_number
       puts "Sorry, too low"
-      guesses -= 1
-      if guesses == 0
-        puts "Oh no, you lose. The secret number was #{secret_number}"
+      puts "Secret number is #{@random_number}"     
+      @guesses -= 1
+      if @guesses == 0
+        puts "Oh no, you lose. The secret number was #{@random_number}"
       end
-    elsif guess > secret_number
+    elsif @player_guess > @random_number
       puts "Sorry, too high"
-      guesses -=1
-      if guesses == 0
-        puts "Oh no, you lose. The secret number was #{secret_number}"
+      puts "Secret number is #{@random_number}"     
+      @guesses -= 1
+      if @guesses == 0
+        puts "Oh no, you lose. The secret number was #{@random_number}"
       end
     end
   end
 end
 
-
-
 main = Main.new
 main.play_game
+
+
+
 

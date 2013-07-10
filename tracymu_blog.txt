@@ -17,6 +17,10 @@ see the latest commit I did
 Then pull request
 
 
+If you do a merge, and if you get a conflict - then you are halfway through a merge. Then when you add/commit to get rid of the conflicts, then that last commit is a merge/commit, so you don't need to do any more merge ever again.
+
+
+
 
 BEWD Week 1
 30 June 2013
@@ -200,8 +204,112 @@ Note that no code should be in the class at all, they need to be in the methods
 when they interact with each other  - 
 see he has started
 
+Me to write an EXPLANTION of attr_accessors so I don't forget!
+Ok, so the attr_accessors have made a getter and setter
+
+So this allows you to set a player name.
+def player_name=(val)
+    @player_name = val
+  end
+
+this allows you to get a player name
+  def player_name
+    @player_name
+  end
+
+
+you can replace that with 
+
+ attr_accessor :player_name
+
+ And basically waht this means is that you can use this player_name variable anywhere outside your class. You can use it anywhere by calling Class.player_name
+
+ 
+
 
 Lesson 6 - Sharing Behaviour
 A class is a blueprint for an object
+
+
+if you have a method in an inheriting class, you can use 'super' in it's methods, and it will return whatever the 'super' version of that method did. (the method has to have the same name)
+
+class Employee
+  attr_accessor :first_name, :last_name
+
+  def initialize(first_name, last_name)
+    @first_name = first_name
+    @last_name = last_name
+
+  end
+
+  def full_name
+    "#{first_name} #{last_name}"
+
+  end
+
+end
+
+
+class Manager < Employee
+
+    attr_accessor :title, :first_name, :last_name
+
+  def initialize(title, first_name, last_name)
+    @title = title
+    super(first_name, last_name)
+  end
+
+  def full_name
+    "#{super} (#{title})"
+
+  end
+
+end 
+
+
+
+ If defined in different physical files, the child would need to require the parent file (class. Remember that in Ruby, different classes should be in different files.) (And remember if you are requiring files you made, then you need to do that $LOAD_PATH thing)
+
+YOU CAN ONLY INHERIT FROM ONE CLASS - you can have only one parent, although you can have grandparets, great grandparent, etc. 
+
+Mixins
+Modules that you 'include' in a class to share behaviours between classes
+
+So Enumerable is a module 
+
+Kerems example of what a mixin is. 
+
+Two classes - bird and plane.
+They share behaviours, but one can't really inherit from the other, becasue they are so different.
+
+So, instead, you can have a module called 'flyable', which you would include in their class, and which will allow them to fly.
+
+This module would be used as a mixin - in both bird and plane.
+
+Modules are different from classes in that they will never be an object themselves - that is, never be instantiated. 
+
+
+Include vs Require:
+
+Require makes it available, loads it into the current file.
+But you can't use the methods in it until you include it.
+
+Namespace
+You can define a class inside a module - so that you can give it a namespace. 
+
+BaseballUtensils::Bat.new
+is different to 
+Animals::Bat.new
+
+
+Final Project App Ideas
+
+1. The recipe searcher - adding recipes based on money saving and filterable
+
+2. The work tracker - tracking hours plus tracking purchases
+
+3. Shopping adder - collecting links to pages of things you are interested in buying?  Like a pinterest for things that you want to buy.
+
+
 
 
