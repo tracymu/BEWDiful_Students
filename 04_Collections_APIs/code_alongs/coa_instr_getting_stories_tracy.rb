@@ -62,20 +62,13 @@ def parse_mashable_feed(raw_response)
   JSON.parse(raw_response)
 end
 
-
-
-
 raw_response = get_mashable_feed
 
 #check if raw_response is a string
-#puts raw_response.class
 
 response = parse_mashable_feed(raw_response)
 
 # check if response is a hash
-#puts response.class
-
-
 
 stories = response["new"]
 
@@ -92,11 +85,10 @@ def print_mashable_story(story)
   ##puts "Created: #{story["post_date"]}"
   puts
 end
-
-print_mashable_stories(stories)
+# 
+# print_mashable_stories(stories)
 
 ########################################################################
-##DIGG API
 
 def get_digg_feed
   #request an instance of that HTTPI class
@@ -134,6 +126,6 @@ end
 
 
 
-print_digg_stories(stories)
+# print_digg_stories(stories)
 
 

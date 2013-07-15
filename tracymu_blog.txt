@@ -224,7 +224,7 @@ you can replace that with
 
  And basically waht this means is that you can use this player_name variable anywhere outside your class. You can use it anywhere by calling Class.player_name
 
- 
+
 
 
 Lesson 6 - Sharing Behaviour
@@ -302,6 +302,18 @@ is different to
 Animals::Bat.new
 
 
+Git Undoing things
+
+In Repo
+git reset --soft
+
+In staged area
+git reset HEAD
+
+In working area
+git checkout
+
+
 Final Project App Ideas
 
 1. The recipe searcher - adding recipes based on money saving and filterable
@@ -312,4 +324,17 @@ Final Project App Ideas
 
 
 
+When making an object oriented programme in ruby:
+
+ - use attr accessor - so that variables in your methods and classes are gettable and settable outside of the class
+
+ - whenever you use a variable between classes - you need to use @
+
+ - if you want to access it between classes you need to do ClassName.variablename. Same for ClassName.method
+
+  - if you want to use a Class and it's variables or methods, you first have to instantiate that class like ClassName.new
+
+
+
+chekc out my midterm for what about initializing - because I never really got that. 
 

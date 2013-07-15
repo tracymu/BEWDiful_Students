@@ -83,35 +83,31 @@ class Game
 
 
   def guessing
-    @secret_number = SecretNumber.new
-    @random_number = @secret_number.select_random_number
-
     @guesses = 3
     while guesses > 0 
       puts "Have a guess!"
       @player_guess = gets.chomp.to_i
-      guess  
+      guess(player_guess)    
     end
   end
 
-  def guess
-    if @player_guess == @random_number
-      puts "Congratulations, you win! The secret number was #{@random_number}"
+  def guess(player_guess)
+    secret_number = SecretNumber.new
+    secret_number.select_random_number
+    if @player_guess == secret_number.random_number
+      puts "Congratulations, you win!"
       @guesses = 0
-      puts "Secret number is #{@random_number}"
-    elsif @player_guess < @random_number
+    elsif @player_guess < secret_number.random_number
       puts "Sorry, too low"
-      puts "Secret number is #{@random_number}"     
       @guesses -= 1
       if @guesses == 0
-        puts "Oh no, you lose. The secret number was #{@random_number}"
+        puts "Oh no, you lose. The secret number was #{secret_number.select_random_number}"
       end
-    elsif @player_guess > @random_number
+    elsif @player_guess > secret_number.random_number
       puts "Sorry, too high"
-      puts "Secret number is #{@random_number}"     
       @guesses -= 1
       if @guesses == 0
-        puts "Oh no, you lose. The secret number was #{@random_number}"
+        puts "Oh no, you lose. The secret number was #{secret_number.select_random_number}"
       end
     end
   end
@@ -119,7 +115,4 @@ end
 
 main = Main.new
 main.play_game
-
-
-
 
