@@ -338,3 +338,157 @@ When making an object oriented programme in ruby:
 
 chekc out my midterm for what about initializing - because I never really got that. 
 
+
+Lesson 07 - My first Rails APP
+
+# Rails generator that creates all the structure for a new app
+Step 1 - $ rails new hello_world
+
+#go into that folder  and start up the server
+
+Step 2 - $ rails server
+
+
+# to get out of th server go control c
+
+But you can actually just keep that window open,and opena  new terminal.
+
+
+Rails development server listens on port 3000
+
+
+wtf is tcpip?
+
+rails server - starts up a server for this rails app that is listening o n port 3000, and it is waiting for requests on port 3000.
+
+
+be in that app folder whenever you are issuing rails any commands to do anything.
+
+
+There is a README.txt - and as you go along you should make chagnes to that, so people know how to get the app up and running.
+
+/app folder is where you put all your templates, controllers,e tc
+
+/bin folder has bundle, rails and rake commands
+
+/config folder - e.g. constant 
+
+/lib folder - 
+
+
+/public folder - usually everything is an interactive page, so this just usually ends up being error pages only
+
+/temp folder - cache files, etc. Rails puts thins in there, not me
+
+/vendor folder - any code that is provided by another vendor. You really should't customise anything you put in there, because if you did, someone might come replace it with newer versiosn. 
+
+
+ROUTES: 
+
+match'/' => 'welcome#index' means  - ------who knows I got lost here .......
+mapping the / page to the Welcome controller, and the index action in there. Which is actually a method called 'index'. Which you can write whatever you like. 
+
+
+
+
+
+HTTP Verbs
+GET
+PUT
+POST
+DELETE
+
+
+
+
+
+Any instance method you use in your controller can be used in the associated view template. 
+
+The variable params - takes the parameters from a URL and makes it into a hash.
+
+
+Everything in the routes file, is going to call a http verb (get/put/etc.) which maps a url to a file
+
+and that is in the form of a hash
+
+so get '/' => 'welcome#index'
+
+
+$rails generate scaffold book title:string desc:text author:string
+It's going to create a book model
+
+rake db:migrate - runs the migration - don't know what htis means
+
+
+So if you pass soemthing into a new instance of a new class e.g. site_feed = SiteFeed.new(reader)
+That has to have an initialise method in that classe (i.e. SietFeed class has to have an initialise method for Reader)
+
+
+
+ def initialize(reader)
+    @reader = reader
+  end
+
+
+  Lesson 8
+
+See my paper about doing a spec for this game thing
+
+
+  Fat Models
+  Skinny Controllers - they shoudlnt' have a lot of stuff in them.
+
+step 1. rails new appname
+step 2. Set up the home route
+instead of needing to do 
+get '/' => 'welcome#index'
+
+you can do 
+root 'welcome#index'
+
+Then you need to make the welcome controller
+then you need to make a view for that (in a welcome folder)
+    
+
+  Rails Linkto helper  
+
+
+  <%= link_to "Anchor text", 'URL' %>
+
+or if you do this :as at the end
+  get '/magic-eight-ball' => 'magic_eight_ball#index', :as => :magic_eight_ball
+
+the you can do <%= link_to "Magic 8 Ball", magic_eight_ball_path %>
+
+because if you set :as, then it lets you use the Rails helper method which will be 'name_path' or 'name_url'
+
+Controller names MUST USE underscores and not hyphens
+
+
+
+When you make a new controller - it should inherit from ApplicationController - even if through a subclass
+
+
+
+If in the routes folder you put a symbol in the URL like this
+get '/magic-eight-ball/:question' => 'magic_eight_ball#ask'
+
+then whenever something is on the end of that url (magic eight ball url), then whatever is on the end goes into the params hash. And you can access it like this
+
+
+open a rails console by typing rails c
+It's like IRB but it is opening up your whole rails application 
+
+@question = params[:question]
+
+so if you went to magic-eight-ball/wtf-is-this
+
+and the params hash would look like this
+
+params = {
+  :question => "wtf-is-this"
+}
+
+Because routes match on the beginning of a URL  - you should order your routes from most specific to least specific.
+
+see the guess-again loop that happened in secret number game. 

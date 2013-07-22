@@ -1,0 +1,12 @@
+<h1>Rock Paper Scissors</h1>
+
+
+<p>Please pick a weapon:</p>
+
+
+<ul>
+  <% @weapons.each do |weapon| %>
+  <li><%= link_to "My guess is #{weapon}", weapon_guess_path(weapon) %><li>
+  <% end %>
+</ul>
+

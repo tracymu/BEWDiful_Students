@@ -1,0 +1,13 @@
+<h1> Welcome to the Secret Number Game</h1>
+
+<% if @you_failed %>
+<p>You guess wrong, please try again!</p>
+<% end %>
+
+<p>Please pick a number:</p>
+
+<ul>
+  <% @numbers.each do |number| %>
+  <li><%= link_to "My guess is #{number}", secret_number_guess_path(number) %><li>
+  <% end %>
+</ul>
