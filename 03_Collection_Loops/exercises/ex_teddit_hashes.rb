@@ -14,6 +14,7 @@
 # Use a loop, so that your program continues to ask a user for stories until they chose to quit. ("Would you like to add another story? Enter 'y' or 'n'")
 # Once the user is finished with entering their stories, use .each to print each story in the stories array. 
 #
+<<<<<<< HEAD
 #
 puts "Welcome to the Teddit reader"
 stories = []
@@ -56,3 +57,6 @@ stories.each {|x| puts x }
 
 
 
+=======
+#
+>>>>>>> teacher/master

@@ -35,6 +35,7 @@
 # Remember to cast input from the Player into the appropriate data type.
 #
 ###############################################################################
+<<<<<<< HEAD
 #Welcome player to game and get their name
 puts "Welcome to the Secret Number game, made by TracyMu. What is your name?"
 player_name=gets.chomp
@@ -90,4 +91,6 @@ play_game
 
 
 
+=======
+>>>>>>> teacher/master
 

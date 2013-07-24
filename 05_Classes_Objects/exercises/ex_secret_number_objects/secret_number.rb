@@ -16,7 +16,11 @@
 #
 # Main
 #	The main class is where the game begins. This class should tell the player who made it.
+<<<<<<< HEAD
 #	Ask the player for their name and ############instantiate the Game class.###########
+=======
+#	Ask the player for their name and instantiate the Game class.
+>>>>>>> teacher/master
 #
 # Secret_Number
 #   This class should initiate an array of numbers that range between 1 - 10.
@@ -24,7 +28,11 @@
 #   This way the secret number is also a secret to you.
 #
 # Player
+<<<<<<< HEAD
 #  Should #######initialize the player's name. #########
+=======
+#  Should initialize the player's name. 
+>>>>>>> teacher/master
 #
 # Game
 #	This class holds most of the game logic and should:
@@ -38,6 +46,7 @@
 # In creating your game, make sure it has arrays, hashes and all functionality is wrapped in methods.
 # Add helpful comments to your code to document what each section does.
 # 
+<<<<<<< HEAD
 # Tips: Copy paste your code from homework 1 where necessary. 
 
 class Main
@@ -116,3 +125,6 @@ end
 main = Main.new
 main.play_game
 
+=======
+# Tips: Copy paste your code from homework 1 where necessary. 
+>>>>>>> teacher/master

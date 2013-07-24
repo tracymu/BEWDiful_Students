@@ -8,6 +8,7 @@
 #For example:
 # "Cats frolic despite tuna shortage" should give you 5 times the upvotes!
 
+<<<<<<< HEAD
 
 puts "Welcome"
 
@@ -35,3 +36,5 @@ puts "New story! Title is #{title}, Category: #{category}, Current Upvotes: #{vo
 
 
 
+=======
+>>>>>>> teacher/master

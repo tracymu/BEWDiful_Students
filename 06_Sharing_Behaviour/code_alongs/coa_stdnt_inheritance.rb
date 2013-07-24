@@ -7,6 +7,7 @@
 ################################################################################
 #
 # 1. Create 2 new classes, Employee and Manager.
+<<<<<<< HEAD
 
 class Employee
   attr_accessor :first_name, :last_name
@@ -46,6 +47,8 @@ end
 rupert = Manager.new("CEO","Rupert","Murdoch")
 
 puts rupert.full_name
+=======
+>>>>>>> teacher/master
 #
 # 2. Change Manager so that it inherits from Employee.
 #

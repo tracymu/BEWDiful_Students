@@ -10,6 +10,7 @@
 # 1 bottle of beer!
 # You take one down and pass it around,
 # No more bottles of beer on the wall :-(
+<<<<<<< HEAD
 
 count = 100
 
@@ -42,3 +43,5 @@ end
 
 puts "No more bottles of beer on the wall :-("
 
+=======
+>>>>>>> teacher/master

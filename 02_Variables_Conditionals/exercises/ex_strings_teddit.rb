@@ -20,6 +20,7 @@
 # 	User enters: ecological
 # 	New story added! Bear feels remorse for stealing candy from baby, Category: Ecological, Current Upvotes: 1
 
+<<<<<<< HEAD
 puts "Welcome"
 
 puts "Do you have a story title?"
@@ -31,3 +32,5 @@ category = gets
 puts "New story! Title is #{title}, Category: #{category}, Current UPvotes: 1"
 
 
+=======
+>>>>>>> teacher/master
