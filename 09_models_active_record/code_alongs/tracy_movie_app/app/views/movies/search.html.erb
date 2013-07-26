@@ -1,0 +1,12 @@
+<div class="container">
+<hr>
+<div class="jumbotron">
+<h1>Your Search Results for <%= params[:search] %></h1>
+<ul>
+  <% @movies.each do |movie| %>
+  <li><%= link_to "#{movie.title}", show_movie_path(movie)  %></li>
+  <% end %>
+</ul>
+</div>
+<hr>
+</div>

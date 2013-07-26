@@ -1,0 +1,25 @@
+<div class="container">
+<hr>
+<div class="jumbotron">
+  <h1>Welcome to the Movies App</h1>
+
+<p>Browse our catalogue below or use our search box. You can also <%= link_to "Add a Movie", new_movie_path%></p>
+
+<span class = "lead">
+<%= form_tag search_path do %>
+  <%= text_field_tag 'search' %>
+  <%= submit_tag 'go' %>
+<% end %>
+</span>
+
+<hr>
+
+  <% @movies.each do |movie| %>
+  <p><strong><%= movie.title %></strong>  -  <%= link_to "Show", show_movie_path(movie) %> | <%= link_to "Edit", edit_movie_path(movie) %> | <%= link_to "Delete", delete_movie_path(movie), :confirm => 'Are you sure?', :method => :delete %> </p>
+  <% end %>
+
+<!-- how to make them in alphabetical ordered list? -->
+
+</div>
+<hr>
+</div>

@@ -1,10 +1,12 @@
 <h1>Welcome to the movies app</h1>
 
-<p> Please choose from the catalogue below</p>
+<p> Please choose from the catalogue below or <%= link_to "Add a Movie", new_movie_path%></p>
 
 
   <% @movies.each do |movie| %>
-  <p><strong><%= link_to "#{movie.title}", show_movie_path(movie)%></strong></p>
-  <p>Year Created: <%= movie.year_released %></p>
+  <p><strong><%= link_to "#{movie.title.order}", show_movie_path(movie)%></strong></p>
   <% end %>
+
+<!-- how to make them in alphabetical ordered list? -->
+
 

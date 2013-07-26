@@ -1,8 +1,14 @@
 TracyMovieApp::Application.routes.draw do
-  root 'welcome#index'
+  root 'movies#index'
 
+  resources :movies
 
-    get '/movies/:id' => 'movies#show', :as => :show_movie
+  get '/movies/:id' => 'movies#show', :as => :show_movie
+
+  post '/movies/search' => 'movies#search', :as => :search
+
+  delete '/movies/:id' => 'movies#destroy', :as => :delete_movie
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
