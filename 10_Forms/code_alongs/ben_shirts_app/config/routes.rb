@@ -1,8 +1,18 @@
 BenShirtsApp::Application.routes.draw do
+<<<<<<< HEAD
 
   resources :shirts
 
   post '/shirts/search' => 'shirts#search', :as => :search
+=======
+  
+  root 'shirts#index'
+  
+  resources :shirts
+
+  post '/shirts/search' => 'shirts#search', :as => :search # => search_path search_url
+  
+>>>>>>> teacher/master
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
