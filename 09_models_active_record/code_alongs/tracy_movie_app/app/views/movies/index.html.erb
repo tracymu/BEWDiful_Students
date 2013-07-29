@@ -15,7 +15,7 @@
 <hr>
 
   <% @movies.each do |movie| %>
-  <p><strong><%= movie.title %></strong>  -  <%= link_to "Show", show_movie_path(movie) %> | <%= link_to "Edit", edit_movie_path(movie) %> | <%= link_to "Delete", delete_movie_path(movie), :confirm => 'Are you sure?', :method => :delete %> </p>
+  <p><strong><%= movie.title %></strong>  -  <%= link_to "Show", show_movie_path(movie) %> | <%= link_to "Edit", edit_movie_path(movie) %> | <%= link_to "Delete", movie_path(movie), :confirm => 'Are you sure?', method: :delete %> </p>
   <% end %>
 
 <!-- how to make them in alphabetical ordered list? -->

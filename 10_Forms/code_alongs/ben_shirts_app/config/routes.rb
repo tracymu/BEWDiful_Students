@@ -1,15 +1,8 @@
-TracyMovieApp::Application.routes.draw do
-  root 'movies#index'
+BenShirtsApp::Application.routes.draw do
 
-  resources :movies
+  resources :shirts
 
-  get '/movies/:id' => 'movies#show', :as => :show_movie
-
-  post '/movies/search' => 'movies#search', :as => :search
-
-
-
-
+  post '/shirts/search' => 'shirts#search', :as => :search
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

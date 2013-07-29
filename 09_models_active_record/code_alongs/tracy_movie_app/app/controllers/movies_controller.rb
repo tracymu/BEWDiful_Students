@@ -40,11 +40,9 @@ class MoviesController < ApplicationController
   end
 
   def destroy
-    find_movie
-    @movie.delete
-    render 'index'
-
-  end
+    @movie.destroy
+    redirect_to root_path
+  end 
 
 
   protected

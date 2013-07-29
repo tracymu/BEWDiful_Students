@@ -1,0 +1,58 @@
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-22 19:06:48 +1000
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/tracy/.rvm/gems/ruby-2.0.0-p195/gems/railties-4.0.0/lib/rails/templates/rails/welcome/index.html.erb (23.5ms)
+Completed 200 OK in 49ms (Views: 30.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (1.2ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (0.9ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateShirts (20130722091615)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "shirts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "image" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20130722091615"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (5.1ms)[0m  INSERT INTO "shirts" ("created_at", "description", "name", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Mon, 22 Jul 2013 09:31:06 UTC +00:00], ["description", "John Gruber made this lovely tshirt"], ["name", "Daring Fireball"], ["updated_at", Mon, 22 Jul 2013 09:31:06 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "shirts" SET "name" = ?, "updated_at" = ? WHERE "shirts"."id" = 1[0m  [["name", "Dark Grey Daring Fireball"], ["updated_at", Mon, 22 Jul 2013 09:33:50 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36mShirt Load (0.4ms)[0m  [1mSELECT "shirts".* FROM "shirts" WHERE "shirts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mShirt Load (0.2ms)[0m  SELECT "shirts".* FROM "shirts" WHERE "shirts"."name" = 'Daring Fireball'
+  [1m[36mShirt Load (0.2ms)[0m  [1mSELECT "shirts".* FROM "shirts" WHERE "shirts"."name" = 'Daring Fireball'[0m
+  [1m[35mShirt Load (0.3ms)[0m  SELECT "shirts".* FROM "shirts" WHERE "shirts"."name" = 'Dark Grey Daring Fireball'
+  [1m[36mShirt Load (0.3ms)[0m  [1mSELECT "shirts".* FROM "shirts"[0m
+  [1m[35mShirt Load (0.3ms)[0m  SELECT "shirts".* FROM "shirts" WHERE "shirts"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mShirt Load (0.2ms)[0m  [1mSELECT "shirts".* FROM "shirts" WHERE "shirts"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "shirts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Mon, 22 Jul 2013 09:46:34 UTC +00:00], ["updated_at", Mon, 22 Jul 2013 09:46:34 UTC +00:00]]
+  [1m[35m (2.4ms)[0m  commit transaction
+  [1m[36mShirt Load (0.3ms)[0m  [1mSELECT "shirts".* FROM "shirts"[0m
+  [1m[35mShirt Load (0.3ms)[0m  SELECT "shirts".* FROM "shirts" WHERE "shirts"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  UPDATE "shirts" SET "name" = ?, "description" = ?, "updated_at" = ? WHERE "shirts"."id" = 2  [["name", "Snoopy Right Paw"], ["description", "Vintage orange and brown tshirt"], ["updated_at", Mon, 22 Jul 2013 09:47:35 UTC +00:00]]
+  [1m[36m (100.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mShirt Load (0.4ms)[0m  SELECT "shirts".* FROM "shirts"
+  [1m[36mShirt Load (0.4ms)[0m  [1mSELECT "shirts".* FROM "shirts" WHERE (name like '%star%')[0m
+  [1m[35mShirt Load (0.5ms)[0m  SELECT "shirts".* FROM "shirts" WHERE (name like '%snoopy%')
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "shirts" ("created_at", "description", "name", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Mon, 22 Jul 2013 09:49:36 UTC +00:00], ["description", "Purple going to a party tshirt"], ["name", "Party shirt"], ["updated_at", Mon, 22 Jul 2013 09:49:36 UTC +00:00]]
+  [1m[36m (100.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mShirt Load (0.4ms)[0m  SELECT "shirts".* FROM "shirts"
+  [1m[36mShirt Load (0.2ms)[0m  [1mSELECT "shirts".* FROM "shirts" WHERE "shirts"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mShirt Load (0.2ms)[0m  SELECT "shirts".* FROM "shirts" WHERE "shirts"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "shirts" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", Mon, 22 Jul 2013 09:54:35 UTC +00:00], ["name", "Shadow bunny"], ["updated_at", Mon, 22 Jul 2013 09:54:35 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35mShirt Load (0.3ms)[0m  SELECT "shirts".* FROM "shirts" WHERE "shirts"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mShirt Load (0.5ms)[0m  [1mSELECT "shirts".* FROM "shirts"[0m
+  [1m[35mShirt Load (0.3ms)[0m  SELECT "shirts".* FROM "shirts" WHERE "shirts"."id" = ? LIMIT 1  [["id", 2]]
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-22 20:15:38 +1000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/tracy/.rvm/gems/ruby-2.0.0-p195/gems/railties-4.0.0/lib/rails/templates/rails/welcome/index.html.erb (0.1ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms)
