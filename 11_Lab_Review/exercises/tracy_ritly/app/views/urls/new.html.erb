@@ -1,0 +1,28 @@
+<div class="container">
+  <hr>
+    <div class="jumbotron">
+      
+      <H1>Welcome to Ritly</H1>
+      
+      <h3>Enter a URL to Shorten</h3>
+      
+      <%= form_for @url do |f| %>
+        <%= f.label :name %>
+        <%= f.text_field :name %>
+        <%= f.submit %> 
+      <% end %>
+      <hr>
+
+      <h3>Or search using an old site</h3>
+
+      <span class = "lead">
+      <%= form_tag search_path do %>
+        <%= text_field_tag 'search' %>
+        <%= submit_tag 'go' %>
+      <% end %>
+      </span>
+
+    </div>
+    <hr>
+
+</div>

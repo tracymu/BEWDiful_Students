@@ -1,0 +1,9 @@
+<H1>Welcome to Ritly</H1>
+
+
+Enter a URL to Shorten
+
+<%= form_tag new_url_path do %>
+  <%= text_field_tag 'url' %>
+  <%= submit_tag 'shorten' %>
+<% end %>

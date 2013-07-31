@@ -1,0 +1,14 @@
+<div class="container">
+  <hr>
+    <div class="jumbotron">
+      <h1>Your Search Results for <%= params[:search] %></h1>
+      <ul>
+        <% @urls.each do |url| %>
+            <li><%= "#{url.name}"%> : <strong> <a href="<%= url.short_link %>"><%= url.short_link %></a></strong>
+        <% end %>
+      </ul>
+    </div>
+  <hr>
+  <p><%= link_to "Search Again", root_path %></p>
+</div>
+

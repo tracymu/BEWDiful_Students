@@ -1,0 +1,17 @@
+<H1>Welcome to Ritly</H1>
+
+<% @urls.each do |url| %>
+  <p><strong><%= url.name %></strong>  | <%= url.hash_code %></p>
+<% end %>
+
+<p>Enter a URL to Shorten</p>
+
+
+<%= form_for @url do |f| %>
+<!-- f is the form builder -->
+<%= f.label :name %>
+<%= f.text_field :name %>
+
+<%= f.submit %> or <%= link_to "Cancel", root_path %>
+
+<% end %>
