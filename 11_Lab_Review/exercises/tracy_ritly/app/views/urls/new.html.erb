@@ -1,7 +1,20 @@
-<div class="container">
-  <hr>
-    <div class="jumbotron">
+
+
+
+      <%  if @url.errors.any? %>
+
+        <div class = 'errors'>
+          <ul>
+            <% @url.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+         
+            <% end %>
+             </ul>
+        </div>
+
+      <% end %>
       
+
       <H1>Welcome to Ritly</H1>
       
       <h3>Enter a URL to Shorten</h3>
@@ -22,7 +35,3 @@
       <% end %>
       </span>
 
-    </div>
-    <hr>
-
-</div>

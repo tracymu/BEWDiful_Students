@@ -1,5 +1,7 @@
 class UrlsController < ApplicationController
 
+before_action :authenticate_user!, :only => [:new]
+
   def index
     @urls = Url.all    
     @url = Url.new

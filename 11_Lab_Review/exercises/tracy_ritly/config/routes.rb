@@ -1,4 +1,6 @@
 TracyRitly::Application.routes.draw do
+  devise_for :users
+  
   root "urls#new" 
   
   resources :urls 

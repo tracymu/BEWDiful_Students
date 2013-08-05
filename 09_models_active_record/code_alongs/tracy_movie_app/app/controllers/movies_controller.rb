@@ -1,16 +1,19 @@
 class MoviesController < ApplicationController
   before_action :find_movie, :only => [:show, :edit, :update, :destroy] 
 
+  # before_action :authenticate_user!, :only => [:new, :edit]
+
   def index
     @movies = Movie.all
   end
 
 
   def search
-#Need to try and understand this     
     @movies = Movie.where("title like?", "%#{params[:search]}%")
 
   end
+
+
 
   
   def new
@@ -20,7 +23,6 @@ class MoviesController < ApplicationController
  
   def create
       @movie = Movie.new permitted_attributes
-      ## Why do we have to repeat this when it is already in the new method?
   
       if @movie.save
         redirect_to movies_path
